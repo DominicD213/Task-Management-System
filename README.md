@@ -113,8 +113,3 @@ This file includes the detailed project description, explaining the design, data
 - Write the project description, detailing the purpose, features, and learning outcomes of the project.
 
 ---
-
-## Setup Instructions:
-1. Clone the repository:
-   ```bash
-   git clone <repository_url>
