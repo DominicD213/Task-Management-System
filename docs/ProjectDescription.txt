@@ -1,0 +1,59 @@
+Project Description: Task Management System
+Overview:
+The Task Management System is a Java-based application designed to help users manage tasks with different priority levels. It allows users to add tasks, view the list of tasks, and mark tasks as completed. The system is built around a PriorityQueue, ensuring that tasks with the highest priority are processed first.
+
+Features:
+Add Task: Users can add a task by providing a description and a priority level (between 1 and 10). Tasks with higher priority (e.g., 10) are considered more important than tasks with lower priority.
+View Tasks: The application allows users to view all tasks currently stored in the system, showing each task's description and its associated priority.
+Complete Task: The user can mark the highest priority task as completed by removing it from the queue.
+Data Persistence (File I/O): The application supports saving and loading tasks from a file. This ensures that users can save their tasks and resume work later.
+Input Validation: The system ensures that users enter valid task data (e.g., priority between 1 and 10) to maintain data integrity.
+Data Structures Used:
+PriorityQueue:
+
+The main data structure used in this project is a PriorityQueue. It ensures tasks are sorted by their priority. In this case, higher-priority tasks (larger numbers) are dequeued before lower-priority tasks.
+Tasks are stored as Task objects, which include a task description and priority level. The PriorityQueue automatically manages task ordering based on priority.
+List:
+
+A List<Task> is used to store tasks when loading and saving tasks to/from a file. It provides an easy way to handle the tasks before they are loaded into the PriorityQueue.
+File I/O:
+
+The application uses file input/output to allow the user to save and load tasks from a file. This is implemented using ObjectOutputStream and ObjectInputStream to serialize the list of tasks and read them from a file.
+Application Flow:
+The user interacts with the system through a simple command-line interface (CLI), where they can:
+
+Add a task by specifying its description and priority.
+View the current list of tasks.
+Complete (remove) the highest-priority task.
+Exit the application or save the current list of tasks to a file for later use.
+The Task class contains:
+
+description (String): The task's description.
+priority (int): The task's priority level.
+The TaskManager class manages the core logic for adding tasks to the queue, viewing tasks, and removing tasks based on priority. It interacts with the PriorityQueue to ensure tasks are processed in the correct order.
+
+The FileIO class handles saving and loading tasks from a file. Tasks are stored in a serialized format to ensure persistence across different sessions.
+
+The InputValidator class ensures that the user inputs valid data, particularly for task priorities.
+
+Key Methods and Components:
+Task Class: Defines the properties of a task, including its description and priority.
+TaskManager Class: Contains methods for adding tasks, viewing tasks, and removing the highest-priority task.
+FileIO Class: Manages saving tasks to a file and loading tasks from a file.
+InputValidator Class: Ensures user input is valid (e.g., priority must be between 1 and 10).
+TaskManagementSystem Class: The main class, which serves as the entry point for the user to interact with the system.
+Project Workflow:
+Task Creation: The user creates a task by providing a description and priority, which is then added to the PriorityQueue.
+Task View: The user can view the list of tasks, where tasks are displayed in order of priority.
+Task Completion: The highest priority task is removed from the system once completed.
+File Operations: The user can save the list of tasks to a file for future use or load tasks from a previously saved file.
+Technologies and Libraries Used:
+Java: The core programming language used to build the system.
+PriorityQueue: Java's built-in priority queue to handle task prioritization.
+JUnit: A unit testing framework to test the functionality of the Task and TaskManager classes.
+File I/O: Java's ObjectOutputStream and ObjectInputStream for serialization to save and load task data.
+Learning Outcomes:
+Data Structures: Gained hands-on experience working with the PriorityQueue to manage tasks efficiently.
+File I/O: Implemented file input/output for saving and loading data, ensuring task persistence.
+User Input Validation: Implemented robust user input validation to ensure valid data entry and prevent errors.
+Java Programming: Improved skills in object-oriented design and Java programming through the development of classes and methods to handle task management.
