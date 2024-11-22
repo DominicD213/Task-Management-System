@@ -1,6 +1,7 @@
-// TaskManager.java
-// This class handles the management of tasks using a priority queue.
-// Bobby Cooper: Implement the task management logic such as adding, viewing, 
-// removing tasks, and sorting tasks based on priority.
+// TaskManagementSystem.java
+// This is the main program that allows the user to interact with the task manager.
+// Miriam Cooper: Implement the user interface (CLI) that lets the user 
+// add tasks, view tasks, and remove tasks interactively.
 // Key variables:
-// - `taskQueue` (PriorityQueue<Task>) to store the tasks in priority order.
+// - `scanner` (Scanner) to get input from the user
+// - `taskManager` (TaskManager) to manage the task queue.
