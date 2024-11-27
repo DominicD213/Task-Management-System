@@ -1,3 +1,4 @@
+
 // TaskManagerTest.java
 // Unit tests for the TaskManager class.
 // Anthony De Casas Mata: Implement tests for methods like addTask(), viewTasks(), 
@@ -5,10 +6,9 @@
 // Key variables:
 // - `manager` (TaskManager) to test task management methods.
 
-
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.Before;
+import org.junit.Test;
+import static org.junit.Assert.*;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -17,7 +17,7 @@ public class TaskManagerTest {
     private TaskManager manager;
 
     // This method runs before each test to set up a new TaskManager
-    @BeforeEach
+    @Before
     public void setUp() {
         manager = new TaskManager();
     }
@@ -97,4 +97,3 @@ public class TaskManagerTest {
         assertEquals(expectedOutput, outContent.toString());
     }
 }
-
